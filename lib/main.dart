@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mindcolors/home.dart';
+import 'package:mindcolors/painter.dart';
 
 void main() {
   runApp(App());
@@ -16,7 +17,7 @@ class App extends StatelessWidget {
         accentColor: Colors.orange,
         primarySwatch: Colors.blueGrey,
       ),
-      home: Home(),
+      home: PainterView(),
     );
   }
 }

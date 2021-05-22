@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+
 class Home extends StatefulWidget {
   @override
   _homescreenState createState() => _homescreenState();
@@ -65,6 +66,9 @@ class _homescreenState extends State<Home> {
                               ),
                               height: 150.0,
                               width: 150.0,
+                              child: Image.asset(
+                                "assets/happy.png",
+                              ),
                             ),
                           ),
                         ),
@@ -99,6 +103,9 @@ class _homescreenState extends State<Home> {
                               ),
                               height: 150.0,
                               width: 150.0,
+                              child: Image.asset(
+                                "assets/anger.png",
+                              ),
                             ),
                           ),
                         ),
@@ -132,6 +139,9 @@ class _homescreenState extends State<Home> {
                               ),
                               height: 150.0,
                               width: 150.0,
+                              child: Image.asset(
+                                "assets/disgust.png",
+                              ),
                             ),
                           ),
                         ),
@@ -165,6 +175,9 @@ class _homescreenState extends State<Home> {
                               ),
                               height: 150.0,
                               width: 150.0,
+                              child: Image.asset(
+                                "assets/fear.png",
+                              ),
                             ),
                           ),
                         ),
@@ -198,10 +211,13 @@ class _homescreenState extends State<Home> {
                               ),
                               height: 150.0,
                               width: 150.0,
+                              child: Image.asset(
+                                "assets/sadness.png",
+                               ),
                             ),
                           ),
                         ),
-                        Text("Sadness"),
+                        Text("Sad"),
                       ],
                     ),
                     color: Colors.transparent,
@@ -231,6 +247,9 @@ class _homescreenState extends State<Home> {
                               ),
                               height: 150.0,
                               width: 150.0,
+                              child: Image.asset(
+                                "assets/surprise.png",
+                              ),
                             ),
                           ),
                         ),
@@ -264,3 +283,4 @@ class _homescreenState extends State<Home> {
     );
   }
 }
+

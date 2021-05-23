@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "114864352550",
+    "project_id": "rosy-dialect-95905",
+    "storage_bucket": "rosy-dialect-95905.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:114864352550:android:e63b6ba62d5105f81e25e7",
+        "android_client_info": {
+          "package_name": "com.example.mindcolors"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "114864352550-9jk5ttiq2fvtiml6ujlq2t8qvlb1q7f4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mindcolors",
+            "certificate_hash": "308cb66d87ddbd7a012b49861f6072fde4a25fc6"
+          }
+        },
+        {
+          "client_id": "114864352550-gcn5jhpeb0jpp3k0680rpeln59g0nko4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUy9CWpoGevlfQZwhXc0u8DzRKS6v_Evc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "114864352550-gcn5jhpeb0jpp3k0680rpeln59g0nko4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

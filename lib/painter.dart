@@ -5,6 +5,7 @@ import 'package:esys_flutter_share/esys_flutter_share.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:mindcolors/gd.dart';
 import 'package:screenshot/screenshot.dart';
 
 class PainterView extends StatelessWidget {
@@ -14,7 +15,6 @@ class PainterView extends StatelessWidget {
 
   Future<bool> getList() async {
     final firestore = FirebaseFirestore.instance;
-    print(getCurrentMail());
     final userRef = firestore.collection('users').doc(getCurrentMail());
     var res = await userRef.get();
     print(res.data());
@@ -35,6 +35,16 @@ class PainterView extends StatelessWidget {
       child: Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.white,
+            title: Text(
+              'MindColors',
+              style: TextStyle(color: Colors.black),
+            ),
+            centerTitle: true,
+            leading: GestureDetector(
+              child: Icon(Icons.save, color: Colors.white),
+              onTap: () => Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => GenerateData())),
+            ),
             actions: [
               GestureDetector(
                 onTap: () {
@@ -75,7 +85,7 @@ class PainterView extends StatelessWidget {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(10.0),
                             child: Align(
                                 alignment: Alignment.bottomCenter,
                                 child: Text(
@@ -83,7 +93,7 @@ class PainterView extends StatelessWidget {
                                   style: TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
-                                      color: Colors.grey),
+                                      color: Colors.black),
                                   textAlign: TextAlign.left,
                                 )),
                           ),

@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:mindcolors/home.dart';
+import 'package:mindcolors/painter.dart';
 import 'package:mindcolors/login.dart';
 
 void main() async {

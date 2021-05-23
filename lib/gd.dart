@@ -15,8 +15,7 @@ class GenerateData extends StatelessWidget {
 
   Future pushData() async {
     final firestore = FirebaseFirestore.instance;
-    final userRef =
-        firestore.collection('users').doc('kabrahamblessy@gmail.com');
+    final userRef = firestore.collection('users').doc('hamda.fzl@gmail.com');
     await userRef.update(
       {
         "moods": FieldValue.arrayUnion(

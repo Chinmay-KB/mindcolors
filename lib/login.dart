@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
@@ -168,6 +169,13 @@ class _LoginPageState extends State<LoginPage> {
                       signInEmailPass(email: email, pass: password);
                     else
                       createInEmailPass(email: email, pass: password);
+                    var firebaseUser =  FirebaseAuth.instance.currentUser;
+                    FirebaseFirestore.instance.collection("users").doc(firebaseUser.email).set(
+                        {
+                          "moods" : null,
+                        },SetOptions(merge: true)).then((_){
+                      print("success!");
+                    });
                   } catch (err) {
                     print(err);
                   }

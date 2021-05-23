@@ -18,7 +18,7 @@ class App extends StatelessWidget {
     getCurrentUser();
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Altruist',
+      title: 'MindColors',
       theme: ThemeData(
         accentColor: Colors.orange,
         primarySwatch: Colors.blueGrey,

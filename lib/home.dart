@@ -1,6 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mindcolors/painter.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 
 class Home extends StatefulWidget {
@@ -9,6 +11,30 @@ class Home extends StatefulWidget {
 }
 
 class _homescreenState extends State<Home> {
+
+
+
+  void add_moods(int mood){
+    String date;
+    date = DateTime.now().toString();
+    date= '${date.substring(8,10)}${date.substring(5,7)}${date.substring(0,4)}';
+
+    var firebaseUser =  FirebaseAuth.instance.currentUser;
+    FirebaseFirestore.instance.collection("users").doc(firebaseUser.email).update({
+      "moods" : FieldValue.arrayUnion([
+
+        {
+          'mood': mood, 'date': date
+        },
+      ])
+      }).then((_) {
+        print("success!");
+    });
+
+  }
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,7 +84,11 @@ class _homescreenState extends State<Home> {
                 child: Center(
                   child: FlatButton(
                     minWidth: 0,
-                    onPressed: () {},
+                    onPressed: () {
+
+                        add_moods(0);
+
+                    },
                     child: Column(
                       children: <Widget>[
                         Flexible(
@@ -94,7 +124,10 @@ class _homescreenState extends State<Home> {
                 child: Center(
                   child: FlatButton(
                     minWidth: 0,
-                    onPressed: () {},
+                    onPressed: () {
+
+                        add_moods(1);
+                      },
                     child: Column(
                       children: <Widget>[
                         Flexible(
@@ -131,7 +164,10 @@ class _homescreenState extends State<Home> {
                 child: Center(
                   child: FlatButton(
                     minWidth: 0,
-                    onPressed: () {},
+                    onPressed: () {
+
+                      add_moods(2);
+                    },
                     child: Column(
                       children: <Widget>[
                         Flexible(
@@ -167,7 +203,9 @@ class _homescreenState extends State<Home> {
                 child: Center(
                   child: FlatButton(
                     minWidth: 0,
-                    onPressed: () {},
+                    onPressed: () {
+                      add_moods(3);
+                      },
                     child: Column(
                       children: <Widget>[
                         Flexible(
@@ -203,7 +241,10 @@ class _homescreenState extends State<Home> {
                 child: Center(
                   child: FlatButton(
                     minWidth: 0,
-                    onPressed: () {},
+                    onPressed: () {
+
+                      add_moods(4);
+                    },
                     child: Column(
                       children: <Widget>[
                         Flexible(
@@ -239,7 +280,10 @@ class _homescreenState extends State<Home> {
                 child: Center(
                   child: FlatButton(
                     minWidth: 0,
-                    onPressed: () {},
+                    onPressed: () {
+
+                      add_moods(5);
+                    },
                     child: Column(
                       children: <Widget>[
                         Flexible(

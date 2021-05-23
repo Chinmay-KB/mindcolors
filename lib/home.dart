@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:mindcolors/painter.dart';
 
 
 class Home extends StatefulWidget {
@@ -13,6 +14,15 @@ class _homescreenState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         iconTheme: IconThemeData(color: Colors.white),
+        actions: [
+          GestureDetector(
+            onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context) => PainterView())),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Icon(Icons.collections),
+            ),
+          )
+        ],
         title: Row(
           children: <Widget>[
             Image.asset(
